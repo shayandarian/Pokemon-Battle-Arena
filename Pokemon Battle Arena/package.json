@@ -1,0 +1,31 @@
+{
+  "name": "pokemon-battle-game",
+  "version": "1.0.0",
+  "description": "A blockchain-based Pokemon battle game",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js",
+    "frontend": "cd frontend && npm start",
+    "copy-artifacts": "node scripts/copy-artifacts.js",
+    "setup": "npm run compile && npm run deploy && npm run copy-artifacts",
+    "download-images": "node scripts/download-pokemon-images.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "hardhat": "^2.17.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "chai": "^4.3.7",
+    "ethers": "^5.7.2",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2"
+  }
+} 
